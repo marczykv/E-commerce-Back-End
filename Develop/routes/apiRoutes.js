@@ -6,7 +6,7 @@ const {
     getCategoryById,
     updateCategory,
     deleteCategory
-} = require('../controllers/categoryController'); // Adjust the path according to your directory structure
+} = require('../controllers/categoryController'); 
 
 // Routes related to the Category model
 router.post('/categories', createCategory);
