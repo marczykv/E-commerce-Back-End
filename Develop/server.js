@@ -9,10 +9,11 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/api', routes);  
+app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
-     console.log(`Server running on port ${PORT}`);
+    console.log("\n***** Tables recreated. Make sure to re-seed the database with `npm run seed`!")
+    console.log(`***** Server running on port ${PORT}`);
   });
 });

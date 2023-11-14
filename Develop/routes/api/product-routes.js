@@ -40,8 +40,6 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// POST and PUT you already have
-
 // DELETE a product by its `id` value
 router.delete('/:id', async (req, res) => {
   try {

@@ -51,7 +51,7 @@ router.put('/:id', async (req, res) => {
       },
     });
 
-    if (!updatedTag[0]) {  // if no rows are affected by the update
+    if (!updatedTag[0]) {  
       res.status(404).json({ message: 'No tag found with this id!' });
       return;
     }
